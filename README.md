@@ -40,7 +40,7 @@ Will have future changes in the next days!
 
 
 
-# 📖 Web page for Gamescom event! <a name="about-project"></a>
+# 📖 Temprature Converter <a name="about-project"></a>
 
 > Testing all the information learned in the course in the areas of HTML, CSS and JS to achieve the results shown..
 > You can watch this video of me commenting on my first advances in creating this web page and how I felt in the process and the Features I added. [Loom video](https://www.loom.com/share/7fb4ce81b2bb4336ab525c2228f151f4)
