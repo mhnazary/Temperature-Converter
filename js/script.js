@@ -1,29 +1,60 @@
-let citiesData = {
-  kabul: {city: 'kabul', temp: 12, weather: 'Sunny', humidity: 23, windSpeed: 32},
-  herat: {city: 'herat', temp: 9, weather: 'windy', humidity: 12, windSpeed: 14},
-  kandahar: {city: 'kandahar', temp: 1, weather: 'rainy', humidity: 43, windSpeed: 12},
-  helmand: {city: 'helmand', temp: 16, weather: 'snowy', humidity: 7, windSpeed: 24},
-  balkh: {city: 'balkh', temp: 23, weather: 'Sunny', humidity: 15, windSpeed: 18},
+﻿
+let inputValue = document.getElementById('converter')
+let placeholderValue = inputValue.getAttribute('placeholder')
+let result = document.querySelector('.result')
+let c = document.querySelector('.C')
+let f = document.querySelector('.F')
+let convertBtn = document.querySelector('.convertButton')
+let resetBtn = document.querySelector('.resetButton')
+let changeBtn = document.querySelector('.changeButton')
+
+function convert() {
+    
+    if (inputValue.value === '') {
+        result.innerHTML = 'Invalid input';
+      } else if (c.innerHTML === '°C') {
+        const resultDegree = inputValue.value * 1.8 + 32;
+        inputValue.value = '';
+        result.innerHTML = resultDegree + ' °F';
+      } else if (c.innerHTML === '°F') {
+        const resultDegree = (inputValue.value - 32) / 1.8;
+        inputValue.value = '';
+        result.innerHTML = resultDegree + ' °C';
+      } else if (isNaN(inputValue.value)) {
+        result.innerHTML = 'Invalid input';
+      }
+
 }
 
-let $ = document
-let searchBtn = $.getElementById('search')
-let searchBar = $.querySelector('.search-bar')
+function reset() {
+    inputValue.value = ''
+    result.innerHTML = ''
+    return true
 
-searchBtn.addEventListener('click', function () {
-    let mainCityName = searchBar.value
-    let mainCitypro = citiesData[mainCityName] 
+}
 
-    if(mainCitypro){
-      $.querySelector('.city').innerHTML = 'weather in '+ mainCitypro.city
-      $.querySelector('.weather').classList.remove('loading');
-      $.querySelector('.temp').innerHTML = mainCitypro.temp + '°C';
-      $.querySelector('.description').innerHTML = mainCitypro.weather 
-      $.querySelector('.humidity').innerHTML ='Humidity: ' + mainCitypro.humidity + '%'
-      $.querySelector('.wind').innerHTML = 'Wind speed: ' +mainCitypro.windSpeed + ' km/h'
-
-    }else {
-      alert ('Invalid input')
+function change() {
+    if(c.innerHTML === '°C'){
+        c.innerHTML = '°F'
+        f.innerHTML = '°C'
+        inputValue.setAttribute('placeholder','°F')
+        document.title = 'Weather F to C'
+    }else if(c.innerHTML === '°F'){
+        c.innerHTML = '°C'
+        f.innerHTML = '°F'
+        inputValue.setAttribute('placeholder','°C')
+        document.title = 'Weather C to F'
     }
-  
+}
+
+convertBtn.addEventListener('click',function () {
+    convert()
+})
+
+resetBtn.addEventListener('click',function () {
+    reset()
+})
+
+changeBtn.addEventListener('click',function () {
+    change()
 })
