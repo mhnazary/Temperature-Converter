@@ -12,18 +12,16 @@ function convert() {
     
     if (inputValue.value === '') {
         result.innerHTML = 'Invalid input';
-      } else if (c.innerHTML === '°C') {
-        const resultDegree = inputValue.value * 1.8 + 32;
-        inputValue.value = '';
-        result.innerHTML = resultDegree + ' °F';
-      } else if (c.innerHTML === '°F') {
+      } else {
+            if (c.innerHTML === '°C') {
+            const resultDegree = inputValue.value * 1.8 + 32;
+            result.innerHTML = inputValue.value + ' °C = ' +  resultDegree + ' °F';
+            inputValue.value = '';
+        } else if (c.innerHTML === '°F') {
         const resultDegree = (inputValue.value - 32) / 1.8;
+        result.innerHTML =inputValue.value + ' °F = ' + resultDegree.toFixed(2) + ' °C';
         inputValue.value = '';
-        result.innerHTML = resultDegree + ' °C';
-      } else if (isNaN(inputValue.value)) {
-        result.innerHTML = 'Invalid input';
-      }
-
+      } }
 }
 
 function reset() {
