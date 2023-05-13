@@ -74,7 +74,7 @@ Will have future changes in the next days!
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-<p> Checkout my project <a href=""> here!</a> </p>  
+<p> Checkout my project [here](https://mhnazary.github.io/Temperature-Converter/) </p>  
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -99,7 +99,6 @@ Use these commands:
 
 ```sh
   cd my-folder
-  git clone git@github.com:enmanuelbayen/Capstone-Web-page.git
 ```
 --->
 
