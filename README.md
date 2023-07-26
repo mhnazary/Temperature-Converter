@@ -1,7 +1,7 @@
 # Temperature-Converter
 
 
-Create with the aim of mentioning one of the thematics of events that I like the most that is that of the video games and using all my knowledge in the first module of the program microverse to give it form and functionality. 
+Create with the aim of mentioning one of the thematics of events that I like the m ost that is that of the video games and using all my knowledge in the first module of the program microverse to give it form and functionality. 
 
 Will have future changes in the next days!    
  
